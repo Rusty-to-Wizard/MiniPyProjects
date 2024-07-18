@@ -42,8 +42,6 @@ def usr_input_condition_check():
 
 
 def engine(USR_INPUT_VAR, RANDOMLY_GENERATED_VAR):
-
-    print(f"if this works: {USR_INPUT_VAR} and {RANDOMLY_GENERATED_VAR}")
     if USR_INPUT_VAR == RANDOMLY_GENERATED_VAR:
         return "You got it!"
 
@@ -51,7 +49,7 @@ def engine(USR_INPUT_VAR, RANDOMLY_GENERATED_VAR):
 
     for i in range(len(USR_INPUT_VAR)):
         if USR_INPUT_VAR[i] == RANDOMLY_GENERATED_VAR[i]:
-            clues.append("Fermi")
+            clues.append("Ferni")
         elif USR_INPUT_VAR[i] in RANDOMLY_GENERATED_VAR:
             clues.append("Pico")
 
@@ -81,7 +79,7 @@ def play_game():
     for attempt in range(LIFE_ATTEMPTS):
         USR_INPUT_VAR = usr_input_condition_check()
         if USR_INPUT_VAR is None:
-            return None
+            return
 
         result = engine(USR_INPUT_VAR, RANDOMLY_GENERATED_VAR)
         print(result)
